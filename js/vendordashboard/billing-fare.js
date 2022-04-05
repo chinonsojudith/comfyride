@@ -5,13 +5,13 @@ document.getElementById('menu-icon')
         document.getElementById('menu-icon').classList.toggle('fa-close');
     })
 
-let bookingDetails = JSON.parse(localStorage.getItem('Booking-Details'));
+let bookingDetails = JSON.parse(localStorage.getItem('Booking-Details'))?JSON.parse(localStorage.getItem('Booking-Details')):"";
 document.getElementById('vendor-name').innerHTML = bookingDetails?.vendor || bookingDetails?.charterVendor || '';
 
-let paidBooking = JSON.parse(localStorage.getItem('Paid-Booking'));
+let paidBooking = JSON.parse(localStorage.getItem('Paid-Booking'))?JSON.parse(localStorage.getItem('Paid-Booking')):[];
 let lastPaidBooking = paidBooking[paidBooking.length-1]
 
-let vendorLogin = JSON.parse(localStorage.getItem('Vendor-Login'));
+let vendorLogin = JSON.parse(localStorage.getItem('Vendor-Login'))?JSON.parse(localStorage.getItem('Vendor-Login')):"";
 let vendorName = vendorLogin?.userName
 
 let billingTable = document.getElementById("billing-table");
@@ -29,4 +29,4 @@ for(let i = paidBooking.length - 1; i>=0; i--){
     }
 }
 
-document.getElementById('vendor-name').innerHTML = vendorLogin.userName;
+document.getElementById('vendor-name').innerHTML = vendorLogin?.userName;

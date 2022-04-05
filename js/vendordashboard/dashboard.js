@@ -1,7 +1,7 @@
-let paidBooking = JSON.parse(localStorage.getItem('Paid-Booking'));
+let paidBooking = JSON.parse(localStorage.getItem('Paid-Booking'))?JSON.parse(localStorage.getItem('Paid-Booking')):[];
 let lastPaidBooking = paidBooking[paidBooking.length-1]
 
-let vendorLogin = JSON.parse(localStorage.getItem('Vendor-Login'));
+let vendorLogin = JSON.parse(localStorage.getItem('Vendor-Login'))?JSON.parse(localStorage.getItem('Vendor-Login')):"";
 
 let vendorName = vendorLogin?.userName
 
@@ -72,8 +72,6 @@ document.getElementById('charter-bookings').innerHTML = `
 `
 
 if(lastBook?.type == 'charter'){
-
-
     document.getElementById('individual-bookings').classList.add('d-none')
     document.getElementById('charter-bookings').classList.remove('d-none')
 } else {
@@ -81,4 +79,11 @@ if(lastBook?.type == 'charter'){
     document.getElementById('charter-bookings').classList.add('d-none')
 }
 
-document.getElementById('vendor-name').innerHTML = vendorLogin.userName;
+document.getElementById('menu-icon')
+    .addEventListener('click', () => {
+        document.getElementById('menu').classList.toggle('neg-left-200px');
+        document.getElementById('menu-icon').classList.toggle('fa-bars');
+        document.getElementById('menu-icon').classList.toggle('fa-close');
+    })
+    
+document.getElementById('vendor-name').innerHTML = vendorLogin?.userName;

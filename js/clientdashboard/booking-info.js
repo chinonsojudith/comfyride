@@ -1,5 +1,5 @@
 //Booking Information Page(Individual)
-let paidBooking = JSON.parse(localStorage.getItem('Paid-Booking'));
+let paidBooking = JSON.parse(localStorage.getItem('Paid-Booking'))?JSON.parse(localStorage.getItem('Paid-Booking')):[];
 let lastPaidBooking = paidBooking[paidBooking.length-1]
 
 
@@ -49,5 +49,5 @@ document.getElementById('menu-icon')
         document.getElementById('menu-icon').classList.toggle('fa-close');
     })
 
-let loginDetails = JSON.parse(localStorage.getItem('Login-Details'));
+let loginDetails = JSON.parse(localStorage.getItem('Login-Details'))?JSON.parse(localStorage.getItem('Login-Details')):"";
 document.getElementById('name').innerHTML = loginDetails?.personName;

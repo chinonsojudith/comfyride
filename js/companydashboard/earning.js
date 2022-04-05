@@ -5,7 +5,7 @@ document.getElementById('menu-icon')
         document.getElementById('menu-icon').classList.toggle('fa-close');
     })
 
-let paidBooking = JSON.parse(localStorage.getItem('Paid-Booking'));
+let paidBooking = JSON.parse(localStorage.getItem('Paid-Booking'))?JSON.parse(localStorage.getItem('Paid-Booking')):[];
 let earnings = document.getElementById("earnings");
 for(let i =  (paidBooking.length-1); i >= 0; i--){
     earnings.innerHTML += `

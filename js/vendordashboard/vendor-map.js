@@ -46,5 +46,5 @@ document.getElementById('menu-icon')
         document.getElementById('menu-icon').classList.toggle('fa-close');
     })
 
-let vendorLogin = JSON.parse(localStorage.getItem('Vendor-Login'));
-document.getElementById('vendor-name').innerHTML = vendorLogin.userName;
+let vendorLogin = JSON.parse(localStorage.getItem('Vendor-Login'))?JSON.parse(localStorage.getItem('Vendor-Login')):"";
+document.getElementById('vendor-name').innerHTML = vendorLogin?.userName;

@@ -22,7 +22,7 @@ document.getElementById('menu-icon')
     })
 
 
-let paidBooking = JSON.parse(localStorage.getItem('Paid-Booking'));
+let paidBooking = JSON.parse(localStorage.getItem('Paid-Booking'))?JSON.parse(localStorage.getItem('Paid-Booking')):[];
 let individualBookings = document.getElementById("individual-bookings");
 let charterBookings = document.getElementById("charter-bookings");
 for(let i =  (paidBooking.length-1); i >= 0; i--){

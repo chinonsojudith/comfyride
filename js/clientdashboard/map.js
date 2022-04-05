@@ -37,7 +37,7 @@ function initMap(){
             });
         }
     }
-    let bookingDetails = JSON.parse(localStorage.getItem('Booking-Details'));
+    let bookingDetails = JSON.parse(localStorage.getItem('Booking-Details'))?JSON.parse(localStorage.getItem('Booking-Details')):"";
     if(bookingDetails?.pickUp == "Abeokuta" && bookingDetails?.destination == "Shagamu"){
         getMap({lat: 7.1475, lng: 3.3619}, {lat: 6.8322, lng: 3.6319})
     } else if (bookingDetails?.pickUp == "Shagamu" && bookingDetails?.destination == "Abeokuta"){
@@ -73,5 +73,5 @@ document.getElementById('menu-icon')
         document.getElementById('menu-icon').classList.toggle('fa-close');
     })
 
-let loginDetails = JSON.parse(localStorage.getItem('Login-Details'));
+let loginDetails = JSON.parse(localStorage.getItem('Login-Details'))?JSON.parse(localStorage.getItem('Login-Details')):"";
 document.getElementById('name').innerHTML = loginDetails?.personName;

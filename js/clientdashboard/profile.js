@@ -1,5 +1,5 @@
 //profile Page
-let loginDetails = JSON.parse(localStorage.getItem('Login-Details'));
+let loginDetails = JSON.parse(localStorage.getItem('Login-Details'))?JSON.parse(localStorage.getItem('Login-Details')):"";
 document.getElementById('fullName').value = loginDetails?.personName
 document.getElementById('email').value = loginDetails?.personEmail
 document.getElementById('phone').value = loginDetails?.personNumber

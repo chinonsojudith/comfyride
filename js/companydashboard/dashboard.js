@@ -1,4 +1,4 @@
-let paidBooking = JSON.parse(localStorage.getItem('Paid-Booking'));
+let paidBooking = JSON.parse(localStorage.getItem('Paid-Booking'))?JSON.parse(localStorage.getItem('Paid-Booking')):[];
 let lastPaidBooking = paidBooking[paidBooking.length-1]
 
 document.getElementById('individual-pick-up').innerHTML = lastPaidBooking?.pickUp || ''
@@ -25,7 +25,7 @@ document.getElementById("earning-amount").innerHTML = lastPaidBooking?.totalAmou
 document.getElementById("vendor-earning").innerHTML = (lastPaidBooking?.totalAmount - (lastPaidBooking?.totalAmount * 0.2)) || (lastPaidBooking?.charterAmount - (lastPaidBooking?.charterAmount * 0.2))
 document.getElementById("our-earning").innerHTML = (lastPaidBooking?.totalAmount * 0.2) || (lastPaidBooking?.charterAmount * 0.2)
 
-let registerDetails = JSON.parse(localStorage.getItem('Register-Details'));
+let registerDetails = JSON.parse(localStorage.getItem('Register-Details'))?JSON.parse(localStorage.getItem('Register-Details')):[];
 
 document.getElementById("total-vendor").innerHTML = 4;
 document.getElementById("total-user").innerHTML = registerDetails.length;
@@ -34,8 +34,10 @@ for(let i = 0; i<paidBooking.length; i++){
     allIncomeArr.push(paidBooking[i]?.totalAmount || paidBooking[i]?.charterAmount)
 }
 
-let totalIncome = allIncomeArr.reduce((a, b) => Number(a) + Number(b))
-document.getElementById("total-income").innerHTML = totalIncome * 0.2
+if (allIncomeArr.length > 0){
+    let totalIncome = allIncomeArr.reduce((a, b) => Number(a) + Number(b))
+    document.getElementById("total-income").innerHTML = totalIncome * 0.2
+}
 
 document.getElementById('menu-icon')
     .addEventListener('click', () => {

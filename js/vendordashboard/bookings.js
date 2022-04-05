@@ -1,7 +1,7 @@
-let paidBooking = JSON.parse(localStorage.getItem('Paid-Booking'));
+let paidBooking = JSON.parse(localStorage.getItem('Paid-Booking'))?JSON.parse(localStorage.getItem('Paid-Booking')):[];
 let lastPaidBooking = paidBooking[paidBooking.length-1]
 
-let vendorLogin = JSON.parse(localStorage.getItem('Vendor-Login'));
+let vendorLogin = JSON.parse(localStorage.getItem('Vendor-Login'))?JSON.parse(localStorage.getItem('Vendor-Login')):"";
 let vendorName = vendorLogin?.userName
 
 let individualBookings = document.getElementById("individual-bookings");
@@ -58,4 +58,4 @@ document.getElementById('menu-icon')
         document.getElementById('menu-icon').classList.toggle('fa-close');
     })
 
-document.getElementById('vendor-name').innerHTML = vendorLogin.userName;
+document.getElementById('vendor-name').innerHTML = vendorLogin?.userName;

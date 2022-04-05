@@ -1,5 +1,5 @@
 // Booking
-let bookingDetails = JSON.parse(localStorage.getItem('Booking-Details'));
+let bookingDetails = JSON.parse(localStorage.getItem('Booking-Details')) ? JSON.parse(localStorage.getItem('Booking-Details')): "";
 document.getElementById('pick-up').value = bookingDetails?.pickUp || ''
 document.getElementById('destination').value = bookingDetails?.destination || ''
 document.getElementById('unit-amount').value = (bookingDetails?.unitAmountValue) || ''
@@ -105,13 +105,13 @@ document.getElementById('cancel-payment')
     })
 
 
-let loginDetails = JSON.parse(localStorage.getItem('Login-Details'));
+let loginDetails = JSON.parse(localStorage.getItem('Login-Details'))? JSON.parse(localStorage.getItem('Login-Details')): "";
 document.getElementById('pay')
     .addEventListener('click', (e) => {
         e.preventDefault()
         let getBookArr = []
         
-        let bookingDetails = JSON.parse(localStorage.getItem('Booking-Details'))
+        let bookingDetails = JSON.parse(localStorage.getItem('Booking-Details'))?JSON.parse(localStorage.getItem('Booking-Details')):""
 
         getBookArr = JSON.parse(localStorage.getItem('Paid-Booking')) ? JSON.parse(localStorage.getItem('Paid-Booking')) : []
         if(bookingDetails?.type == 'individual'){
@@ -185,67 +185,3 @@ document.getElementById('menu-icon')
     })
 
 document.getElementById('name').innerHTML = loginDetails?.personName;
-// //paystack
-// function payWithPaystack() {
-    
-//     let loginDetails = JSON.parse(localStorage.getItem('Login-Details'))
-//     let bookingDetails = JSON.parse(localStorage.getItem('Booking-Details'));
-
-//     var handler = PaystackPop.setup({ 
-//         key: 'pk_test_3565d6583cdbc99520801b3f60e77f92e74f8877', //put your public key here
-//         email: loginDetails.email, //put your customer's email here
-//         amount: bookingDetails.totalAmountValue, //amount the customer is supposed to pay
-//         metadata: {
-//             custom_fields: [
-//                 {
-//                     display_name: "Mobile Number",
-//                     variable_name: "mobile_number",
-//                     value: loginDetails.number //customer's mobile number
-//                 }
-//             ]
-//         },
-//         callback: function (response) {
-//             //after the transaction have been completed
-//             //make post call  to the server with to verify payment 
-//             //using transaction reference as post data
-//             $.post("verify.php", {reference:response.reference}, function(status){
-//                 if(status == "success")
-//                     //successful transaction
-//                     alert('Transaction was successful');
-//                 else
-//                     //transaction failed
-//                     alert(response);
-//             });
-//         },
-//         onClose: function () {
-//             //when the user close the payment modal
-//             alert('Transaction cancelled');
-//         }
-//     });
-//     handler.openIframe(); //open the paystack's payment modal
-// }
-
-
-// var paymentForm = document.getElementById('paymentForm');
-// paymentForm.addEventListener('submit', payWithPaystack, false);
-// function payWithPaystack() {
-//     let loginDetails = JSON.parse(localStorage.getItem('Login-Details'))
-//     let bookingDetails = JSON.parse(localStorage.getItem('Booking-Details'));
-//   var handler = PaystackPop.setup({
-//     key: 'pk_test_3565d6583cdbc99520801b3f60e77f92e74f8877', // Replace with your public key
-//     email: loginDetails.email,
-//     amount: bookingDetails.totalAmountValue, // the amount value is multiplied by 100 to convert to the lowest currency unit
-//     currency: 'NGN', // Use GHS for Ghana Cedis or USD for US Dollars
-//     // ref: 'YOUR_REFERENCE', // Replace with a reference you generated
-//     callback: function(response) {
-//       //this happens after the payment is completed successfully
-//       var reference = response.reference;
-//       alert('Payment complete! Reference: ' + reference);
-//       // Make an AJAX call to your server with the reference to verify the transaction
-//     },
-//     onClose: function() {
-//       alert('Transaction was not completed, window closed.');
-//     },
-//   });
-//   handler.openIframe();
-// }
