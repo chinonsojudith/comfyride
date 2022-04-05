@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="">
+    <meta name="authors" content="">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="shortcut icon" href="img/shuttle-icon.565834e.svg" type="image/x-icon">
+    <title>ComfyRide</title>
+</head>
+<body>
+    <div class="preloader-wrapper">
+        <div class="preloader">
+            <img src="img/iphone-spinner.gif" alt="ComfyRide">
+        </div>
+    </div>
+    <div class="j-container" id="home">
+        
+        <!-- nav -->
+        <nav class="j-nav d-flex d-block-tab space-between fixed w-100 top-0 bg-dark pt-1 pb-1 pl-5 pr-5 align-center relative pt-mobile-8px pb-mobile-8px">
+            <div class="d-flex space-between align-center">
+                <a href="index.html" class="j-nav-logo">Comfy<span class="primary-color">Ride</span></a>
+                <div class="white-color d-none d-block-tab"><i class="fa fa-bars white-color" aria-hidden="true" id="menu-icon"></i></div>
+            </div>
+            <div class="">
+                <div class="j-nav-items d-flex d-block-tab align-center hide-show" id="menu">
+                    <a href="index.html" class="d-block j-nav-item white-color mb-bottom-5px">Home</a>
+                    <a href="#book" class="ml-tab-0 d-block j-nav-item ml-25px white-color mb-bottom-5px">Book</a>
+                    <a href="#vehicle" class="ml-tab-0 d-block j-nav-item ml-25px white-color mb-bottom-5px">Vehicle</a>
+                    <a href="#about" class="ml-tab-0 d-block j-nav-item ml-25px white-color mb-bottom-5px">About</a>
+                    <a href="#service" class="ml-tab-0 d-block j-nav-item ml-25px white-color mb-bottom-5px">Service</a>
+                    <a href="#contact" class="ml-tab-0 d-block j-nav-item ml-25px white-color mb-bottom-5px">Contact</a>
+    
+                    <a href="clientdashboard/login.html" class="ml-tab-0 d-block j-nav-item ml-25px white-color mb-bottom-5px">LogIn</a>
+                    <a href="clientdashboard/register.html" class="ml-tab-0 d-block j-nav-item ml-25px white-color btn mb-bottom-5px text-center">Register</a>
+                    <a href="partner.html" class="ml-tab-0 d-block j-nav-item ml-25px white-color btn mb-bottom-5px text-center">Partner With Us</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- header -->
+        <header class="p-5" id="header">
+            <div class="header-hero text-center white-color">
+                <h1>Fast &amp; Easy Way To Book A Car</h1>
+                <p class="w-50 m-auto mb-3 lh-23 hero-p">
+                    ConfyRide is a stress-free ride services for the smart travellers. 
+                    Why stress you can easily book from the comfort of your home at an affordable cost.
+                </p>
+                <a href="#book" class="btn btn-lg btn-sm-mobile">Book your ride</a> 
+            </div>
+        </header>
+
+        <!-- book -->
+        <section class="d-grid book-section m-5 align-center" id="book">
+            <!-- booking-form -->
+            <div class="j-col-4 j-col-md-12 booking-form-container p-5 form-bg">
+                <div class="book-left-heading d-flex py-6 gap-3 space-between">
+                    <div class="white-color toggle-active" id="individual-toggle">Individual</div>
+                    <div class="white-color" id="charter-toggle">Charter</div>
+                </div>
+                
+                <div class="book-form">
+                    <!-- individual -->
+                    <form action="clientdashboard/login.html" id="individual-book">
+                        <div class="d-grid gap-3">
+                            <fieldset class="border-none j-col-6">
+                                <label for="pick-up" class="d-block">Pick Up Station</label>
+                                <select name="pick-up" class="d-block w-100 p-6px border-none outline-none" id="pick-up">
+                                    <option value="" selected>Select an option</option>
+                                    <option value="Abeokuta">Abeokuta</option>
+                                    <option value="Shagamu">Shagamu</option>
+                                    <option value="Ota">Ota</option>
+                                    <option value="Abeokuta">Abeokuta</option>
+                                </select>
+                            </fieldset>
+                            
+                            <fieldset class="border-none j-col-6">
+                                <label for="destination" class="d-block">Destination</label>
+                                <select name="destination" class="d-block p-6px w-100 border-none outline-none" id="destination">
+                                    <option value="" selected>Select an option</option>
+                                    <option value="Abeokuta">Abeokuta</option>
+                                    <option value="Shagamu">Shagamu</option>
+                                    <option value="Ota">Ota</option>
+                                    <option value="Abeokuta">Abeokuta</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <fieldset class="border-none">
+                            <label for="vendor" class="d-block">Prefered Vendor</label>
+                            <select name="vendor" class="d-block p-6px w-100 border-none outline-none" id="vendor">
+                                <option value="" selected>Select an option</option>
+                                <option value="jj-transport">JJ Transport Ltd.</option>
+                                <option value="abc">ABC Transport</option>
+                                <option value="gigm">GIGM</option>
+                                <option value="tytl">The Young Transport Ltd.</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="border-none">
+                            <label for="day" class="d-block">Date</label>
+                            <input type="date" name="day" class="w-100 p-5px border-none outline-none" id="day">
+                        </fieldset>
+                        <fieldset class="border-none">
+                            <label for="time" class="d-block">Time</label>
+                            <select name="time" class="d-block w-100 p-6px border-none outline-none" id="time">
+                                <option value="" selected>Select an option</option>
+                                <option value="6:30AM">6:30AM</option>
+                                <option value="7:30AM">7:30AM</option>
+                                <option value="8:30AM">8:30AM</option>
+                                <option value="9:30AM">9:30AM</option>
+                            </select>
+                        </fieldset>
+                        <div class="d-grid gap-3">
+                            <fieldset class="border-none j-col-6">
+                                <label for="person" class="d-block">No. of Persons</label>
+                                <input type="text" name="person" class="d-block w-100 p-6px border-none outline-none" id="person">
+                            </fieldset>
+                            <fieldset class="border-none j-col-6">
+                                <label for="unit-amount" class="d-block">Unit Amount</label>
+                                <input type="text" name="unit-amount" class="d-block w-100 p-6px border-none outline-none" id="unit-amount" disabled>
+                            </fieldset>
+                        </div>
+                        <fieldset class="border-none">
+                            <label for="amount" class="d-block">Total Amount</label>
+                            <input type="text" name="amount" class="d-block w-100 p-6px border-none outline-none text-center" id="amount" disabled>
+                        </fieldset>
+                        <fieldset class="border-none">
+                            <input type="submit" class="d-block w-100 p-6px border-none outline-none primary-color bg-white" value="Book Now">
+                        </fieldset>
+                    </form>
+                    <!-- Charter -->
+                    <form action="clientdashboard/login.html" class="d-none" id="charter-book">
+                        <div class="d-grid gap-3">
+                            <fieldset class="border-none j-col-6">
+                                <label for="charter-pick-up" class="d-block">Pick Up Station</label>
+                                <select name="charter-pick-up" class="d-block w-100 p-6px border-none outline-none" id="charter-pick-up">
+                                    <option value="" selected>Select an option</option>
+                                    <option value="Abeokuta">Abeokuta</option>
+                                    <option value="Shagamu">Shagamu</option>
+                                    <option value="Ota">Ota</option>
+                                    <option value="Abeokuta">Abeokuta</option>
+                                </select>
+                            </fieldset>
+                            
+                            <fieldset class="border-none j-col-6">
+                                <label for="charter-destination" class="d-block">Destination</label>
+                                <select name="charter-destination" class="d-block p-6px w-100 border-none outline-none" id="charter-destination">
+                                    <option value="" selected>Select an option</option>
+                                    <option value="Abeokuta">Abeokuta</option>
+                                    <option value="Shagamu">Shagamu</option>
+                                    <option value="Ota">Ota</option>
+                                    <option value="Abeokuta">Abeokuta</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <fieldset class="border-none j-col-12">
+                            <label for="charter-vehicle" class="d-block">Vehicle Model</label>
+                            <select name="charter-vehicle" class="d-block w-100 p-6px border-none outline-none" id="charter-vehicle">
+                                <option value="" selected>Select an option</option>
+                                <option value="Coaster">Coaster</option>
+                                <option value="Sienna">Sienna</option>
+                                <option value="Camry">Camry</option>
+                                <option value="Hummer">Hummer Bus</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="border-none">
+                            <label for="charter-day" class="d-block">Date</label>
+                            <input type="date" name="charter-day" class="w-100 p-5px border-none outline-none" id="charter-day">
+                        </fieldset>
+                        <fieldset class="border-none">
+                            <label for="charter-time" class="d-block">Time</label>
+                            <select name="charter-time" class="d-block w-100 p-6px border-none outline-none" id="charter-time">
+                                <option value="" selected>Select an option</option>
+                                <option value="6:30AM">6:30AM</option>
+                                <option value="7:30AM">7:30AM</option>
+                                <option value="8:30AM">8:30AM</option>
+                                <option value="9:30AM">9:30AM</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="border-none">
+                            <label for="charter-vendor" class="d-block">Prefered Vendor</label>
+                            <select name="charter-vendor" class="d-block p-6px w-100 border-none outline-none" id="charter-vendor">
+                                <option value="" selected>Select an option</option>
+                                <option value="jj-transport">JJ Transport Ltd.</option>
+                                <option value="abc">ABC Transport</option>
+                                <option value="gigm">GIGM</option>
+                                <option value="tytl">The Young Transport Ltd.</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="border-none">
+                            <label for="charter-amount" class="d-block">Total Amount</label>
+                            <input type="text" name="charter-amount" class="d-block w-100 p-6px border-none outline-none text-center" id="charter-amount" disabled>
+                        </fieldset>
+                        <fieldset class="border-none">
+                            <a href="clientdashboard/login.html" <input type="submit" class="d-block w-100 p-6px border-none outline-none primary-color bg-white" value="Book Now"></a>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <!-- alternate-booking -->
+            <div class="j-col-8 j-col-md-12 p-5 bg-white">
+                <h2 class="text-center ">Alternate Booking</h2>
+                <div class="d-grid book-space">
+                    <div class="j-col-4 j-col-tab-12 text-center p-5">
+                        
+                        <img src="img/whatsapp (1).png" alt="" class="">
+                        <p class="lh-23">You can make your booking through Whatsapp by clicking the button below</p>
+                        <a href="https://wa.me/qr/2FDLVM5OJQQHO1" class="btn book-space-btn">Book Now</a>
+                    </div>
+                    <div class="j-col-4 j-col-tab-12 text-center p-5">
+                        
+                        <img src="img/telephone.png" alt="" class="">
+                        <p class="lh-23">You can kindly make your booking via voice call by clicking the button below</p>
+                        <a href="tel:+2347061654399" class="btn book-space-btn">Book Now</a>
+                    </div>
+                    <div class="j-col-4 j-col-tab-12 text-center p-5">
+                        
+                        <img src="img/arroba.png" alt="" class="">
+                        <p class="lh-23">You can make your booking via email by clicking the button below</p>
+                        <a href = "mailto: jaisloaded@gmail.com.com" class="btn book-space-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- vehicle -->
+        <section class="m-5" id="vehicle">
+            <h2 class="text-center mb-3">Featured Vehicles</h2>
+            <div class="d-grid vehicle-card-container gap-3">
+                <div class="j-col-3 j-col-md-6 j-col-mobile-12 vehicle-card pb-5">
+                    <div class="img-size relative overlay-container">
+                        <img src="img/Petrol Engine Used Toyota Coaster Bus _ 6 Gearbox Toyota Used Mini Bus.png" alt="" class="w-100">
+                        <!-- detail-box -->
+                        <div class="overlay d-none absolute">
+                            <p><strong>Vehicle Name:</strong> Coaster Bus</p>
+                            <p><strong>Vehicle Model:</strong> Toyota Coaster 2019</p>
+                            <p><strong>Number of Passengers:</strong> 50</p>
+                            <p><strong>Charter Cost Per Day:</strong> &#8358;150,000</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="mb-3">Coaster Bus</h3>
+                        <a href="clientdashboard/login.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                <div class="j-col-3 j-col-md-6 j-col-mobile-12 vehicle-card pb-5">
+                    <div class="img-size relative overlay-container">
+                        <img src="img/2015 Toyota Sienna SE Review Editor's Review _ Car Reviews _ Auto123.jpg" alt="" class="w-100">
+                        <!-- detail-box -->
+                        <div class="overlay d-none absolute">
+                            <p><strong>Vehicle Name:</strong> Sienna</p>
+                            <p><strong>Vehicle Model:</strong> Sienna 2021</p>
+                            <p><strong>Number of Passengers:</strong> 7</p>
+                            <p><strong>Charter Cost Per Day:</strong> &#8358;50,000</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="mb-3">Sienna</h3>
+                        <a href="clientdashboard/login.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                <div class="j-col-3 j-col-md-6 j-col-mobile-12 vehicle-card pb-5">
+                    <div class="img-size relative overlay-container">
+                        <img src="img/eb957cd5-6461-4dfc-9b19-c73e57ea3442.jpg" alt="" class="w-100">
+                        <!-- detail-box -->
+                        <div class="overlay d-none absolute">
+                            <p><strong>Vehicle Name:</strong> Camry</p>
+                            <p><strong>Vehicle Model:</strong> Toyota Camry 2018</p>
+                            <p><strong>Number of Passengers:</strong> 7</p>
+                            <p><strong>Charter Cost Per Day:</strong> &#8358;50,000</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="mb-3">Camry</h3>
+                        <a href="clientdashboard/login.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                <div class="j-col-3 j-col-md-6 j-col-mobile-12 vehicle-card pb-5">
+                    <div class="img-size relative overlay-container">
+                        <img src="img/Toyota high ace (2).jpg" alt="" class="w-100">
+                        <!-- detail-box -->
+                        <div class="overlay d-none absolute">
+                            <p><strong>Vehicle Name:</strong> Hummer</p>
+                            <p><strong>Vehicle Model:</strong> Hummer Bus 2020</p>
+                            <p><strong>Number of Passengers:</strong> 7</p>
+                            <p><strong>Charter Cost Per Day:</strong> &#8358;50,000</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="mb-3">Hummer Bus</h3>
+                        <a href="clientdashboard/login.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- about -->
+        <section class="d-grid m-5 align-center about" id="about">
+            <div class="j-col-6  p-5 j-col-mobile-12">
+                <h4 class="about">About Us</h4>
+                <h2>Welcome to Comfy<span>Ride</span></h2>
+                <p class="text-justify lh-23">
+                    The ComfyRide Corporation is one of the largest worldwide vehicle rental and booking companies, 
+                    and the ComfyRide brand is one of the most recognized globally. We are a team of passionate people 
+                    and a leading technology-enabled company driven by a vision to solve the mobility challenges in Africa. 
+                    We want to get people and goods to their destinations hitch-free. It is personal for us because we 
+                    understand the frustration of epileptic transportation. We are making mobility safe, affordable, accessible, 
+                    and sustainable through the deployment of high-performance technologies and operators.
+                    
+                </p>
+            </div>
+            <div class="j-col-6 j-col-mobile-12">
+                <img src="img/order-ride.gif" alt="" class="w-100">
+            </div>
+        </section>
+
+        <!-- service -->
+        <section class="p-5 service-section" id="service">
+            <h2 class="text-center">Our Services</h2>
+            <div class="d-grid">
+                <div class="j-col-3 j-col-md-6 j-col-mobile-12 text-center p-5 p-mobile-0">
+                    <img src="" alt="">
+                    <h3>Vehicle Charter</h3>
+                    <p class="lh-23">
+                        We allow our customers/clients choose their fleet and if desired, 
+                        customize it to fit. 
+                    </p>
+                </div>
+                <div class="j-col-3 j-col-md-6 j-col-mobile-12 text-center p-5 p-mobile-0">
+                    <img src="" alt="">
+                    <h3>Ride Sharing</h3>
+                    <p class="lh-23">
+                        Ride with ours going to the same destination
+                    </p>
+                </div>
+                <div class="j-col-3 j-col-md-6 j-col-mobile-12 text-center p-5 p-mobile-0">
+                    <img src="" alt="">
+                    <h3>Private trips</h3>
+                    <p class="lh-23">
+                        Request a personal driver to get you to your precise destination
+                        using our facilities
+                    </p>
+                </div>
+                <div class="j-col-3 j-col-md-6 j-col-mobile-12 text-center p-5 p-mobile-0">
+                    <img src="" alt="">
+                    <h3>Collaboration</h3>
+                    <p class="lh-23">
+                        We collaborate with companies for easy rides for there employees.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- contact -->
+        <section class="p-5" id="contact">
+            <h2 class="text-center mb-3">Contact Us</h2>
+            <div class="gap-3 d-grid">
+                <!-- google map -->
+                <div class="j-col-6 j-col-tab-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15837.038411141903!2d3.384936464304008!3d7.095879261467008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103a4ac3aad61d17%3A0x8cb9281ed8dd8efd!2s110118%2C%20Kobape!5e0!3m2!1sen!2sng!4v1647354072076!5m2!1sen!2sng" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="w-100"></iframe>
+                </div>
+                <div class="j-col-6 j-col-tab-12">
+                    <h3 class="mb-3">Any Question in mind? <br> Don't worry, contact us</h3>
+                    <form action="">
+                        <div class="d-grid">
+                            <input type="text" name="contactName" id="contactName" placeholder="Enter your name" class="j-col-12 p-5px outline-none" required><br>
+                            <input type="email" name="contactEmail" id="contactEmail" class="j-col-12 p-5px outline-none" placeholder="Enter your Email" required><br>
+                            
+                            <textarea name="message" id="contactMessage" class="j-col-12 p-5px w-100 mb-3 outline-none resize-none" cols="30" rows="10" placeholder="Message" required></textarea>
+                        </div>
+                        <input type="submit" value="Send message" class="btn btn-lg outline-none border-none" id="message">
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer - 1 -->
+        <footer class="d-grid p-5 bg-dark white-color gap-3 text-center-tab">
+            <div class="j-col-4 j-col-tab-12 mb-3-tab">
+                <a href="#home" class="j-nav-logo mb-3">Comfy<span class="primary-color">Ride</span></a>
+                <p class="text-justify text-center-tab lh-23">
+                        ComfyRide is a stress-free ride services for the smart travellers. 
+                       
+                </p>
+            </div>
+            <div class="j-col-2 j-col-tab-12 d-flex-tab justify-center-tab">
+                <a href="index.html" class="d-block white-color nav-item-footer mb-3">Home</a>
+                <a href="#book" class="d-block white-color nav-item-footer mb-3 ml-20px-tab">Book</a>
+                <a href="#vehicle" class="d-block white-color nav-item-footer mb-3 ml-20px-tab">Vehicle</a>
+                <a href="#about" class="d-block white-color nav-item-footer mb-3 ml-20px-tab">About</a>
+                <a href="#service" class="d-block white-color nav-item-footer mb-3 ml-20px-tab">Service</a>
+            </div>
+            <div class="j-col-2 j-col-tab-12 d-flex-tab justify-center-tab">
+                <a href="partner.html#join-us" class="d-block white-color nav-item-footer mb-3">Join us</a>
+                <a href="partner.html#how-it-works" class="d-block white-color nav-item-footer mb-3 ml-20px-tab">How it works</a>
+                <a href="#contact" class="d-block white-color nav-item-footer mb-3 ml-20px-tab">Contact</a>
+            </div>
+            <div class="j-col-4 j-col-tab-12 text-center-tab">
+                <div class="mb-3-tab mb-3">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <div class="d-flex newsletter-form">
+                        <input type="email" name="newsletter-email" id="" placeholder="email" class="p-5px outline-none border-none news-input">
+                        <input type="submit" value="Submit" class="btn outline-none border-none news-btn">
+                    </div>
+                </div>
+                <div class="">
+                    <div><h3>Follow Us</h3>
+                    <div class="social">
+                        <img src="img/Facebook.svg">
+                        <img src="img/Twitter.svg">
+                        <img src="img/Instagram.svg">
+                    </div>
+                </div>
+            </div>
+            </div>
+           
+        </footer>
+
+        <!-- footer - 2 -->
+        <div>
+            <p class="text-center">Copyright&copy;2022 All right reserved</p>
+        </div>
+        <a href="#home" class="scroll-up fixed"><img src="img/scroll.svg" alt=""></a>
+    </div>
+    <script src="https://kit.fontawesome.com/aedd297eaa.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

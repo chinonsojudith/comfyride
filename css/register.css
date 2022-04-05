@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 100%
+}
+a{text-decoration: none}
+.container{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../img/bg-2.jpg);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    padding: 3% 5%;
+}
+.logo{
+    font-weight: 700;
+    
+}
+.logo a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+span{
+    color: #00E069;
+}
+span a{
+    color: #00E069;
+    text-decoration: none;
+}
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6% auto;
+    max-width: 420px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 2%;
+}
+.form-text{
+    margin-bottom: 5%;
+}
+form input {
+    width: 100%;
+    border-radius: 8px;
+    height: 35px;
+    padding:3%;
+
+    outline: none;
+    border: 1px solid #c4c4c4;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 3%;
+    
+}
+input:focus{
+    border: 1px solid #00E069;
+}
+form{
+    margin-bottom: 5px;
+    padding: 2% 1%;
+}
+form p{
+    text-align: center;
+    font-size: 0.6rem;
+}
+#register-form, #login-form{
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    padding: 1.5%;
+    text-align: center;
+    background-color: #00E069;
+    border: 1px solid #00E069;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.1s ease;
+    margin-bottom:2px;
+}
+#register-form:hover, #login-form:hover{
+    opacity:0.8
+}
+#register-form a, #login-form a{
+    text-decoration: none;
+    color:#fff;
+}
+
+.font-16{
+    font-size: 1.3rem;
+}
+.ride-text{
+    text-align: center;
+}
+.m-3{margin-bottom: 3%}
+.mb-3{margin-bottom: 3%}
+input{font-size: .8rem}
+@media screen and (min-width:1440px){
+    :root{
+        font-size: 120%
+    }
+    .form-container{
+        max-width: 700px;
+    }
+}
+@media screen and (max-width:1024px){
+    :root{
+        font-size: 90%
+    }
+}

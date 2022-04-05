@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../img/shuttle-icon.565834e.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/client.css">
+    <title>User Dashboard - My Map</title>
+</head>
+<body>
+    <div class="j-container">
+        
+        <section class="client-main">
+            <nav class="white-bg fixed top-nav top-0 glow-shadow w-100 d-flex align-center space-between">
+                <div class="d-none d-block-tab"><i class="fa fa-bars" aria-hidden="true" id="menu-icon"></i></div>
+                <div class="ml-auto">
+                    <i class="fas fa-user"></i>
+                    <span id="name"></span>
+                </div>
+            </nav>
+            <div class="left-25 w-25 bg-dark w-tab-200px neg-left-200px z-index-1" id="menu">
+                <div>
+                    <a href="../index.html" class="logo"><div class="white-text p-3">Comfy<span class="primary-color">Ride</span></div></a>
+                </div>
+                <div class="mb-55 mt-8">
+                    <a href="client.html" class="d-flex client-nav-item d-flex align-center gap-3"><i class="fas fa-book-open"></i><div>Place A Book</div></a>
+                    <a href="profile.html" class="d-flex client-nav-item d-flex align-center gap-3"><i class="fas fa-user"></i><div>Profile</div></a>
+                    <a href="booking-info.html" class="d-flex client-nav-item d-flex align-center gap-3"><i class="fas fa-book-open"></i><div>Booking Information</div></a>
+                    <a href="my-map.html" class="d-flex client-nav-item d-flex align-center gap-3 nav-active"><i class="fas fa-map-marker-alt"></i><div>My Map</div></a>
+                </div>
+                <div>
+                    <a href="login.html" class="d-flex client-nav-item d-flex align-center gap-3"><i class="fas fa-sign-out-alt"></i><div>Logout</div></a>
+                </div>
+            </div>
+            <div class="right-75 w-75 w-tab-100 ml-tab-0">
+                <!-- Map -->
+                <section class="body-sect" id="map" style="margin-top: 50px">
+                </section>
+
+            </div>
+        </section>
+    </div>
+    <script src="https://kit.fontawesome.com/aedd297eaa.js" crossorigin="anonymous"></script>
+    <script src="../js/clientdashboard/map.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjSFQZz4Ab5He18uptYfWCcfJEr1zHK1g&callback=initMap">
+    </script>
+    
+</body>
+</html>

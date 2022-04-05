@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="../img/shuttle-icon.565834e.svg">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/client.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <title>Vendor Dashboard</title>
+</head>
+<body>
+    <div class="j-container">
+        <section class="client-main">
+            <nav class="white-bg fixed top-nav top-0 glow-shadow w-100 d-flex align-center space-between">
+                <div class="d-none d-block-tab"><i class="fa fa-bars" aria-hidden="true" id="menu-icon"></i></div>
+                <div class="ml-auto">
+                    <i class="fas fa-user"></i>
+                    <span id="vendor-name"></span>
+                </div>
+            </nav>
+            <div class="left-25 w-25 bg-dark w-tab-200px neg-left-200px" id="menu">
+                <div>
+                    <!-- <div class="img-circle"></div> -->
+                    <a href="../index.html" class="logo"><div class="white-text p-3">Comfy<span class="primary-color">Ride</span></div></a>
+                </div>
+                <div class="mb-55 mt-8">
+                    <a href="dashboard.html" class="d-flex client-nav-item d-flex align-center gap-3 nav-active"><i class="fas fa-columns"></i><div>Dashboard</div></a>
+                    <a href="bookings.html" class="d-flex client-nav-item d-flex align-center gap-3"><i class="fas fa-book-open"></i><div>Bookings</div></a>
+                    <a href="billing-fare.html" class="d-flex client-nav-item d-flex align-center gap-3"><i class="fas fa-credit-card"></i><div>Biling fares</div></a>
+                    <a href="vendor-map.html" class="d-flex client-nav-item d-flex align-center gap-3"><i class="fas fa-map-marker-alt"></i><div>My Map</div></a>
+                </div>
+                <div>
+                    <a href="login.html" class="d-flex client-nav-item d-flex align-center gap-3"><i class="fas fa-sign-out-alt"></i><div>Logout</div></a>
+                </div>
+            </div>
+            <div class="right-75 w-75 w-tab-100 ml-tab-0">
+                <!-- Dashboard -->
+                <section class="body-sect">
+                    <h3 class="mt-3 mb-3"> Vendor Dashboard</h3>
+                    <div class="d-grid gap-3 mb-3 mb-mobile-25px">
+                        <div class="j-col-4 light-green-bg p-3 j-col-mobile-12">
+                            <i class="fas fa-taxi"></i>
+                            <p class="big-text mb-3" id="info-booking-type">Total trips</p>
+                            <p id="total-trips"></p>
+                        </div>
+                        <div class="j-col-4 green-bg p-3 j-col-mobile-12">
+                            <i class="fas fa-money-bill"></i>
+                            <p class="big-text mb-3" id="info-pass-id">Total Fares</p>
+                            <p id="total-fare"></p>
+                        </div>
+                        <div class="j-col-4 light-purple-bg p-3 j-col-mobile-12">
+                            <i class="fas fa-bus"></i>
+                            <p class="big-text mb-3" id="info-booking-type">Rides Booked</p>
+                            <p id="individual-trips"></p>
+                        </div>
+                        <div class="j-col-4 light-blue-bg p-3 j-col-mobile-12 mb-mobile-15px">
+                            <i class="fas fa-bus"></i>
+                            <p class="big-text mb-3" id="info-days-left">Chartered Ride</p>
+                            <p id="charter-trips"></p>
+                        </div>
+                    </div>
+                    <h3 class="mt-3">Recent Book</h3>
+                    <div class="table-responsive">
+                        <table class="w-100" id="individual-bookings"> 
+                        </table>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="w-100 d-none" id="charter-bookings">
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+    <script src="https://kit.fontawesome.com/aedd297eaa.js" crossorigin="anonymous"></script>
+    <script src="../js/vendordashboard/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+
+.mb-55{
+    margin-bottom: 55%
+}
+.mt-3{margin-top: 3%}
+.mt-8{margin-top: 8%}
+.mt-10{margin-top: 10%}
+.py-3{
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.p-3{padding: 3%}
+
+.border-radius-5{border-radius: 5px}
+.white-text{color: #fff}
+.img-circle{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: auto;
+    border: 1px solid #fff;
+    background: #fff;
+}
+.body-sect{
+    padding: 50px 5%;
+    min-height: 100vh
+
+}
+
+.client-nav-item{
+    padding: 3% 5%;
+    color: #fff;
+    margin: 10px 0;
+}
+.client-nav-item:hover, .client-nav-item:active{
+    background: #038503;
+    border-left: 3px solid #fff;
+}
+.nav-active{
+    background: #038503;
+    border-left: 3px solid #fff;
+ }
+
+input, label, select, td{
+    font-size: .8rem;
+}
+.btn{height: unset;}
+#amount{text-align: center}
+table{border-collapse: collapse}
+.light-green-bg{
+    background: #0000ff;
+    padding: 5%;
+    border-radius: 5px;
+    color: #fff;
+}
+.green-bg{
+    background: #00b100;
+    padding: 5%;
+    border-radius: 5px;
+    color: #fff;
+}
+.light-blue-bg{
+    background: #ff0000;
+    padding: 5%;
+    border-radius: 5px;
+    color: #fff;
+}
+.light-purple-bg{
+    background: rgb(116, 1, 116);
+    padding: 5%;
+    border-radius: 5px;
+    color: #fff;
+}
+#map{
+    height: calc(100vh - 50px);
+}
+.btn-not-active{
+    background: #fff;
+    border: 1px solid #00e069;
+    color: #00e069;
+}
+.btn-not-active:hover{
+    color: #fff;
+}
+.payment-form{
+    position: absolute;
+    background: #e3e3ee;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
