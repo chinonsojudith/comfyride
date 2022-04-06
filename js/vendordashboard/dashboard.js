@@ -26,7 +26,7 @@ for(let i = 0; i<paidBooking.length; i++){
 }
 
 document.getElementById('total-trips').innerHTML = countTrips
-document.getElementById('total-fare').innerHTML = addFare
+document.getElementById('total-fare').innerHTML = addFare * 0.8
 document.getElementById('individual-trips').innerHTML = countIndTrips
 document.getElementById('charter-trips').innerHTML = countCharTrips
 console.log(bookArr)
@@ -47,7 +47,7 @@ document.getElementById('individual-bookings').innerHTML = `
         <td class="p-3" id="individual-pick-up">${lastBook?.pickUp}</td>
         <td class="p-3" id="individual-destination">${lastBook?.destination}</td>
         <td class="p-3" id="individual-person">${lastBook?.person}</td>
-        <td class="p-3" id="individual-amount">${lastBook?.totalAmount}</td>
+        <td class="p-3" id="individual-amount">${(lastBook?.totalAmount) * 0.8}</td>
     </tr>
 `
 console.log(lastBook)

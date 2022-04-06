@@ -16,7 +16,7 @@ for(let i = paidBooking.length - 1; i>=0; i--){
                     <td class="p-3" id="individual-pick-up">${paidBooking[i]?.pickUp}</td>
                     <td class="p-3" id="individual-destination">${paidBooking[i]?.destination}</td>
                     <td class="p-3" id="individual-person">${paidBooking[i]?.person}</td>
-                    <td class="p-3" id="individual-amount">${paidBooking[i]?.totalAmount}</td>
+                    <td class="p-3" id="individual-amount">${(paidBooking[i]?.totalAmount) * 0.8}</td>
                 </tr>
             `
         } else {
@@ -27,7 +27,7 @@ for(let i = paidBooking.length - 1; i>=0; i--){
                     <td class="p-3" id="charter-pick-up">${paidBooking[i]?.charterPickUp}</td>
                     <td class="p-3" id="charter-destination">${paidBooking[i]?.charterDestination}</td>
                     <td class="p-3" id="charter-vehicle">${paidBooking[i]?.charterVehicle}</td>
-                    <td class="p-3" id="charter-amount">${paidBooking[i]?.charterAmount}</td>
+                    <td class="p-3" id="charter-amount">${(paidBooking[i]?.charterAmount) * 0.8}</td>
                 </tr>
             `
         }

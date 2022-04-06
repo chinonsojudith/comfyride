@@ -23,7 +23,7 @@ for(let i = paidBooking.length - 1; i>=0; i--){
                 <td class="p-3" id="billingTime">${paidBooking[i]?.time || paidBooking[i]?.charterTime}</td>
                 <td class="p-3" id="billingName">${paidBooking[i]?.personName}</td>
                 <td class="p-3" id="billingBank">${paidBooking[i]?.bankName || paidBooking[i]?.charterBankName || ''}</td>
-                <td class="p-3" id="billingAmount">${paidBooking[i]?.totalAmount || paidBooking[i]?.charterAmount}</td>
+                <td class="p-3" id="billingAmount">${(paidBooking[i]?.totalAmount) * 0.8 || (paidBooking[i]?.charterAmount) * 0.8}</td>
             </tr>
         `
     }
